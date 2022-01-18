@@ -1,3 +1,3 @@
-import helloGuest from "../src/cli.js"
+import helloGuest from '../src/cli.js';
 
-helloGuest()
+helloGuest();
