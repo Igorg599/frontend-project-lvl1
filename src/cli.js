@@ -1,11 +1,11 @@
-import readlineSync from 'readline-sync';
+import readlineSync from "readline-sync"
 
-console.log('Welcome to the Brain Games!');
+console.log("Welcome to the Brain Games!")
 
 const helloGuest = async () => {
-  const name = await readlineSync.question('May I have your name? ');
-  console.info(`Hello, ${name}!`);
-  return name;
-};
+  const name = await readlineSync.question("May I have your name? ")
+  console.log(`Hello, ${name}!`)
+  return name
+}
 
-export default helloGuest;
+export default helloGuest
