@@ -5,7 +5,7 @@ const general = async (getTaskData, condition) => {
   const name = await helloGuest();
   console.log(condition);
 
-  for (let i = 3; i > 0; i--) {
+  for (let i = 3; i > 0; i -= 1) {
     const { question, right } = getTaskData();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
