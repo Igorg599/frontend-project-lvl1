@@ -8,9 +8,11 @@ calc-games:
 	node bin/brain-calc.js
 gcd-games:
 	node bin/brain-gcd.js
-gcd-games:
+progression-games:
 	node bin/brain-progression.js
 prime-games:
 	node bin/brain-prime.js
+publish:
+	npm publish --dry-run
 lint:
 	npx eslint .
