@@ -10,5 +10,7 @@ gcd-games:
 	node bin/brain-gcd.js
 gcd-games:
 	node bin/brain-progression.js
+prime-games:
+	node bin/brain-prime.js
 lint:
 	npx eslint .
