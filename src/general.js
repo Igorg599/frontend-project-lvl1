@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
-import helloGuest from './cli.js';
 
 const general = async (getTaskData, condition) => {
-  const name = await helloGuest();
+  console.log('Welcome to Brain Games!!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello ${name}`);
   console.log(condition);
 
   for (let i = 3; i > 0; i -= 1) {
