@@ -6,7 +6,7 @@ const general = async (getTaskData, condition) => {
   console.log(`Hello ${name}`);
   console.log(condition);
 
-  for (let i = 3; i > 0; i -= 1) {
+  for (let roundCount = 3; roundCount > 0; roundCount -= 1) {
     const { question, right } = getTaskData();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
