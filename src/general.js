@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import helloGuest from '../cli.js';
+import helloGuest from './cli.js';
 
 const general = async (getTaskData, condition) => {
   const name = await helloGuest();

@@ -1,4 +1,4 @@
-import general from '../utils/general.js';
+import general from '../general.js';
 import getRandomNumber from '../utils/rundomNumber.js';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
