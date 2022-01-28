@@ -26,7 +26,7 @@ const getIntermediate = () => {
     ...arrayProgression.slice(0, noVisibleNum),
     '..',
     ...arrayProgression.slice(noVisibleNum + 1),
-  ];
+  ].join(' ');
 
   const right = String(arrayProgression[noVisibleNum]);
 
