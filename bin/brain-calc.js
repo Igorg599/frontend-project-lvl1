@@ -1,3 +1,5 @@
-import calculate from '../src/games/calc.js';
+#!/usr/bin/env node
 
-calculate();
+import calculate from "../src/games/calc.js"
+
+calculate()

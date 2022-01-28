@@ -1,3 +1,5 @@
-import parityCheck from '../src/games/even.js';
+#!/usr/bin/env node
 
-parityCheck();
+import parityCheck from "../src/games/even.js"
+
+parityCheck()

@@ -1,3 +1,5 @@
-import helloGuest from '../src/cli.js';
+#!/usr/bin/env node
 
-helloGuest();
+import helloGuest from "../src/cli.js"
+
+helloGuest()
