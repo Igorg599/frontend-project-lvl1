@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/rundomNumber.js';
-import general from '../general.js';
+import mainEngineGame from '../main.js';
 
 const description = 'What is the result of the expression?';
 
@@ -14,18 +14,19 @@ const calcResult = (sign, oneNumber, twoNumber) => {
   }
 };
 
-const getIntermediate = () => {
+const getValues = () => {
   const signs = ['+', '-', '*'];
-  const randomSign = signs[getRandomNumber(3) - 1];
+  const operatorIndex = getRandomNumber(0, 2);
+  const selectSign = signs[operatorIndex];
 
-  const argumentOne = getRandomNumber(99);
-  const argumentTwo = getRandomNumber(99);
+  const argumentOne = getRandomNumber(1, 99);
+  const argumentTwo = getRandomNumber(1, 99);
 
-  const right = String(calcResult(randomSign, argumentOne, argumentTwo));
+  const right = String(calcResult(selectSign, argumentOne, argumentTwo));
 
-  const question = `${argumentOne} ${randomSign} ${argumentTwo}`;
+  const question = `${argumentOne} ${selectSign} ${argumentTwo}`;
 
   return { question, right };
 };
 
-export default () => general(getIntermediate, description);
+export default () => mainEngineGame(getValues, description);

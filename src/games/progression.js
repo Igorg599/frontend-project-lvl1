@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils/rundomNumber.js';
-import general from '../general.js';
+import mainEngineGame from '../main.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -14,13 +14,13 @@ const getProgression = (start, lengthProgression, middleValue) => {
   return progression;
 };
 
-const getIntermediate = () => {
-  const startNum = getRandomNumber(100);
-  const middleNum = getRandomNumber(9);
+const getValues = () => {
+  const startNum = getRandomNumber(1, 100);
+  const stepProgression = getRandomNumber(1, 9);
 
-  const arrayProgression = getProgression(startNum, length, middleNum);
+  const arrayProgression = getProgression(startNum, length, stepProgression);
 
-  const noVisibleNum = getRandomNumber(arrayProgression.length) - 1;
+  const noVisibleNum = getRandomNumber(1, arrayProgression.length) - 1;
 
   const question = [
     ...arrayProgression.slice(0, noVisibleNum),
@@ -33,4 +33,4 @@ const getIntermediate = () => {
   return { question, right };
 };
 
-export default () => general(getIntermediate, description);
+export default () => mainEngineGame(getValues, description);
